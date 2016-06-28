@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-###############################################################
-# This is the Cake bootstrapper script that is responsible for
-# downloading Cake and all specified tools from NuGet.
-###############################################################
+
+##########################################################################
+# This is the Cake bootstrapper script for Linux and OS X.
+# This file was downloaded from https://github.com/cake-build/resources
+# Feel free to change this file to fit your needs.
+##########################################################################
 
 # Define directories.
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -42,7 +44,7 @@ fi
 # Make sure that packages.config exist.
 if [ ! -f "$TOOLS_DIR/packages.config" ]; then
     echo "Downloading packages.config..."
-    curl -Lsfo "$TOOLS_DIR/packages.config" http://cakebuild.net/bootstrapper/packages
+    curl -Lsfo "$TOOLS_DIR/packages.config" http://cakebuild.net/download/bootstrapper/packages
     if [ $? -ne 0 ]; then
         echo "An error occured while downloading packages.config."
         exit 1

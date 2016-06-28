@@ -50,8 +50,7 @@ Task("iOS").Does(() =>
         settings.WithProperty("BuildIpa", "true");
         settings.WithProperty("IncludeITunesArtwork", "false");		
         settings.WithProperty("CodesignKey", "iPhone Developer: iOS Dev (7V257NZ2YW)");
-        settings.WithProperty("CodesignProvision", "iOS Team Provisioning Profile: *");
-        //settings.WithProperty("CodesignProvision", "3f0a2399-8bdd-4307-8fb9-14ed1c7ed645");
+        settings.WithProperty("CodesignProvision", "3f0a2399-8bdd-4307-8fb9-14ed1c7ed645");
     });
  
 }).IsDependentOn("Clean")
